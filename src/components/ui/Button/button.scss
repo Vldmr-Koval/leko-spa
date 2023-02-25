@@ -4,6 +4,10 @@
     border-radius: 35.84px;
     color: white;
     transition: all 0.3s linear;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
     &:hover{
     background: #ffffff;
     color: #FF4D4D;

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import './button.scss'
 
 const Button = ({
-    children, onClick, className, disabled, active, ...atrs
+    children, onClick, className, disabled, active, ...attrs
 }) => {
     
     const classes = classNames(
@@ -15,7 +15,7 @@ const Button = ({
     
     return (
         <button
-        {...atrs}
+        {...attrs}
          className={classes}
          disabled={disabled}
          onClick={onClick}
