@@ -1,22 +1,22 @@
-.btn{
-    background: #FF4D4D;
-    border: 2px solid #FF4D4D;
-    border-radius: 35.84px;
-    color: white;
-    transition: all 0.3s linear;
+// .btn{
+//     background: #FF4D4D;
+//     border: 2px solid #FF4D4D;
+//     border-radius: 35.84px;
+//     color: white;
+//     transition: all 0.3s linear;
 
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    &:hover{
-    background: #ffffff;
-    color: #FF4D4D;
+//     display: flex;
+//     align-items: center;
+//     gap: 5px;
+//     &:hover{
+//     background: #ffffff;
+//     color: #FF4D4D;
     
-    }
-    &:disabled{
-        background-color: gray;
-    }
-}
+//     }
+//     &:disabled{
+//         background-color: gray;
+//     }
+// }
 
 .blue{
     color: #1f06ff

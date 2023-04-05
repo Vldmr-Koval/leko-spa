@@ -1,12 +1,21 @@
-.input{
-    background-color: rgb(148, 222, 175);
-}
+
 
 .inputWrapper{
+    display: flex;
+    flex-direction: column;
    .inputLabel{
-    background-color: rgb(208, 248, 105);
+    margin: 20px 0;
 
    } 
+   .input{
+    background: #f6f6f6;
+    border-radius: 2em;
+    padding: 0.875em 0.375em;
+    border: 2px solid transparent;
+    transition: .3s;
+    margin: 20px 0;
+
+}
    .inputError{
     background-color: rgb(255, 135, 105);
    }

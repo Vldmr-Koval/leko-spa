@@ -1,0 +1,16 @@
+.wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+
+    
+}
+.wrap__item{
+    width: 25%;
+    // min-width: 100px;
+}
+.imageAdv{
+    width: 15em;
+}
