@@ -2,7 +2,8 @@
 import './packagingItem.scss'
 import Image from '../ui/Image'
 
-const packagingItem = ({product}) => {
+const PackagingItem = ({product}) => {
+    console.log(product.img)
     return (
              <div className='wrapper__item' >
                  <Image className='wrapper__item__img' src={product.img}/>
@@ -14,4 +15,4 @@ const packagingItem = ({product}) => {
 }
 
 
-export default packagingItem
+export default PackagingItem

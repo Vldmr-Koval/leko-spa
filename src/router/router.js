@@ -2,9 +2,11 @@ import {createBrowserRouter} from "react-router-dom";
 import App from '../pages/App';
 import Contacts from "../pages/Contacts";
 
-import TestingPage from "../pages/TestingPage"
 import Main from "../pages/Main"
 import Packaging from "../pages/Packaging"
+import Reviews from '../pages/Reviews'
+import Product from '../pages/Product'
+
 
 
 const router = createBrowserRouter([
@@ -20,13 +22,25 @@ const router = createBrowserRouter([
         path: "/contacts",
         element: <Contacts/>,
       },
-      {
-        path: "/testing",
-        element: <TestingPage/>,
-      },
+
       {
         path: "/packaging",
         element: <Packaging/>,
+      },
+      {
+        path: "/product/:name",
+        element: <Product/>,
+
+      },
+      // TODO: костиль із шляхами на продукти/головну
+      {
+        path: "/product/",
+        element: <Main/>,
+
+      },
+      {
+        path: "/reviews",
+        element: <Reviews/>,
       }
     ]
     },

@@ -1,17 +1,23 @@
-@import-normalize;
+@import './../../node_modules/normalize-scss/sass/normalize';
 @import 'reset.scss';
-// @import '/src/components/ui/Button/button.scss';
+@import 'variables.scss';
 
 
 
 body {
-    margin: 0 auto;
-    max-width: 90%;
+    // margin: 0 auto;
+
+    // max-width: 90%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    // font-family: Gotham Pro;
+  }
+
+  .overflow-hidden{
+    overflow: hidden;
   }
   
   code {
@@ -24,18 +30,34 @@ body {
   }
 
   .section{
-    
-    margin: 20px auto;
-    padding: 50px 20px;
-    box-shadow: 0px 0px 20px 0px rgb(233 233 233);
+    // max-width: 1140px;
+    margin: 0 auto;
+    padding: 40px 0px;
 
-    // background-color: rgb(237, 246, 255);
+    &__header{
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 1.8em;
+
+      @media (max-width: 600px) {
+        font-size: 1.3em;
+        // color: #FF4D4D;
     
+    } 
+
+  }
+  }
+  .container{
+    padding: 0 20px;
+    max-width: 1140px;
+    min-width: 320px;
+    margin: 0 auto;
+    // background-color: #ffd6d647;
   }
 
   .btn{
     background: #FF4D4D;
-    font-size: .6875rem;
+    font-size: .875em;
     border: 2px solid;
     font-weight: 500;
     color: #fff;
@@ -45,15 +67,17 @@ body {
     text-align: center;
     cursor: pointer;
 
-    &:hover{
+    &:hover:enabled{
     transition: 0.6s;  
-    transform: translateY(-2px);
-    box-shadow: 0px 2px 0px 0px #cf3f3f29;
+    color: inherit;
+    background: 0 0;
+
     
     }
 
     &:disabled{
         background-color: rgba(128, 128, 128, 0.32);
+        cursor: auto;
     }
 }
 
@@ -65,6 +89,22 @@ body {
     padding: 1.28571em 0.71429em;
     font-weight: 700;
     min-width: 12.85714em;
+    &:hover:enabled{
+      color:  #FF4D4D;
+  
+      
+      }
+}
+.secondary{
+  padding: 0.38824em 2.06471em;
+  font-size: 1.0625rem;
+  background: $primary-color;
+  color: #fff;
+  &:hover:enabled{
+    color: $primary-color;
+
+    
+    }
 }
 
 .section-header{
@@ -72,4 +112,10 @@ body {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   color: #000;
+
 }
+
+// *{
+//   border: #FF4D4D 1px solid;
+//   background-color: #d6fee553;
+// }

@@ -1,21 +1,33 @@
 import Advantages from '../../components/Advantages'
-import PackagingBlock from '../../components/PackagingBlock'
 import Feedback from '../../components/Feedback'
-import Form from '../../components/Form'
+import ProductBlock from '../../components/ProductBlock'
+import Image from '../../components/ui/Image'
+import WithForm from '../../components/HOC/WithForm'
+
+import TextArea from '../../components/TextArea'
+import text from '../../components/TextArea/text'
+import {prod1} from '../../img/index'
+
+
 
 import './main.scss'
 
 const Main = () => {
+    const headerTA = 'Компанія з вантажоперевезень у Вінниці'
     
     return (
         <>
-            <div><h2>Main page</h2></div>
-            <Form/>
-            <Feedback/>
-
+                <WithForm>
+                    <Image width={650} heigth={470} src={prod1} /> 
+                </WithForm>
+                
             <Advantages/>
-            <PackagingBlock/>
-
+            <ProductBlock/>
+            <Feedback/>
+            <TextArea 
+                size={350} 
+                children={text.packing()} 
+                header={headerTA}/> 
         </>
        
     )

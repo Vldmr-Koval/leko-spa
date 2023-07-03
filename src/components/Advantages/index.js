@@ -12,23 +12,23 @@ const Advantages = () => {
 
     return (
         <section className='section'>
-            <h2>Як ми працюємо</h2>
-            <div className='wrap'>
+            <h2 className='section__header'>Як ми працюємо</h2>
+            <div className='wrap container'>
                 <div className='wrap__item'>
                     <Image 
                         className='imageAdv'
                         src={Fast} 
                         />
-                    <h5>Швидко</h5>
-                    <p>Оформлення замовлення online або за номером 30-30 впродовж декількох секунд</p>
+                    <h5 className='wrap__item__title'> Швидко</h5>
+                    <p className='wrap__item__body'>Оформлення замовлення online або за номером 30-30 впродовж декількох секунд</p>
                 </div>
                 <div className='wrap__item'>
                     <Image 
                         className='imageAdv'
                         src={Secure} 
                         />
-                    <h5>Безпечно</h5>
-                    <p>Надаємо всі необхідні документи</p>
+                    <h5 className='wrap__item__title'>Безпечно</h5>
+                    <p className='wrap__item__body'>Надаємо всі необхідні документи</p>
                 </div>
                
                 <div className='wrap__item'>
@@ -36,16 +36,16 @@ const Advantages = () => {
                         className='imageAdv'
                         src={Comfort} 
                         />
-                    <h5>Комфортно</h5>
-                    <p>Вирішуємо всі транспортні завдання фахівцями NOSHA з мінімальною участю клієнта</p>
+                    <h5 className='wrap__item__title'>Комфортно</h5>
+                    <p className='wrap__item__body'>Вирішуємо всі транспортні завдання фахівцями NOSHA з мінімальною участю клієнта</p>
                 </div>
                 <div className='wrap__item'>
                     <Image 
                         className='imageAdv'
                         src={Operative} 
                         />
-                    <h5>Оперативно</h5>
-                    <p>Здійснюємо перевезення вантажів в найкоротші та своєчасні терміни
+                    <h5 className='wrap__item__title'>Оперативно</h5>
+                    <p className='wrap__item__body'>Здійснюємо перевезення вантажів в найкоротші та своєчасні терміни
 </p>
                 </div>
                 

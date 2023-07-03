@@ -1,0 +1,80 @@
+
+
+.section-text-area{
+
+    &__header{
+      font-size: 2rem;
+      margin-top: 1.25em;
+      margin-bottom: 1.25em;
+      color: #000;
+      text-align: center;
+    }
+
+    &__wrap{
+        // height: 310px;
+        overflow-y: scroll;
+        padding: 0 50px;        
+        direction: rtl;
+        .inner-text{
+        direction: ltr;
+
+            & * li{
+                padding: 5px;
+                text-decoration: none;
+                list-style: none;
+                position: relative;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #00a5f1;
+                    left: -10px;
+                    top: 0.85em;
+
+                }
+            }
+
+            & h2{
+                font-weight: 600;
+                font-size: 1.3em;
+                margin-top: 1em;
+                margin-bottom: 0.7em;
+            }
+
+            & p{
+                margin-bottom: 0.8em;
+                margin-top: 0.8em;
+            }
+
+
+        }
+      /* width */
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: #f6f7f9;
+
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background:#00a5f1;
+          border-radius: 5px;
+          cursor: pointer;
+
+
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: #0083c0;
+        }
+  
+    }
+}

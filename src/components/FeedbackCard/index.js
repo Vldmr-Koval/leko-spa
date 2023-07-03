@@ -1,6 +1,7 @@
 import PropsTypes from 'prop-types';
 import  Image  from "../ui/Image";
-// import Star from "../../img/star_active.svg"
+import {avatarClient, quotes} from '../../img'
+
 import { Rating } from '@mui/material';
 
 import './feedback-card.scss'
@@ -10,8 +11,8 @@ const FeedbackCard = ({
     src, content, name, position, rating
 }) => {
     if(!src){
-        src = '../../img/clients/avatar-2155431_1280.png'
-    }
+        src = avatarClient
+    }   
 
     
     return (
@@ -19,13 +20,18 @@ const FeedbackCard = ({
             <div className='feedback-card'>
                 <Image 
                 className='feedback-card__img'
-                src={require('../../img/clients/avatar-2155431_1280.png')} 
-                // не працює кректно посилання на картинку
+                src={src} 
                 circle
                 />
-                <div className='show-stars flex'>
-                <Rating name="size-small" defaultValue={rating} size="small" readOnly/>
-                </div>
+                <Image 
+                className='feedback-card__img-quotes'
+                src={quotes} 
+                />
+                <Rating 
+                    className='feedback-card__rating'
+                    name="size-small" 
+                    defaultValue={rating} 
+                    size="small" readOnly/>
                 <p className='feedback-card__content'>{content}</p>
                 <p className='feedback-card__name'>{name}</p>
                 <p className='feedback-card__position'>{position}</p>

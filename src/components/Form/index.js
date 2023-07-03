@@ -2,8 +2,8 @@ import { useForm } from "react-hook-form";
 import { useState, useEffect} from 'react'
 import Image from '../ui/Image'
 
-import {ReactComponent as StarSVG} from '../../img/star_active.svg';
-import { ReactSVG } from "react-svg";
+import {ReactComponent as Phone} from '../../img/form/svg/phone_1.svg';
+import {ReactComponent as Place} from '../../img/form/svg/place.svg';
 
 import { Swiper, SwiperSlide} from 'swiper/react';
 import { Navigation} from 'swiper';
@@ -14,9 +14,17 @@ import 'swiper/scss/navigation';
 
 import './form.scss'
 
+
 const Form = () => {    
 
-    const [counterDocker, setCounterDoker] = useState(1);
+    const [counterDocker, setCounterDoker] = useState(0);
+    const [counterPassenger, setCounterPassenger] = useState(0);
+
+
+    useEffect(() => {
+        setCounterDoker(1);
+        setCounterPassenger(1);
+      }, []);
 
     const plusOneDocker = (e) => {
         e.preventDefault();
@@ -33,8 +41,23 @@ const Form = () => {
             setCounterDoker(result)
             setValue('counterDocker', result)
         }
-        
-       
+    };
+
+    const plusOnePassenger = (e) => {
+        e.preventDefault();
+        if (counterPassenger <10 ) {
+            let result = counterPassenger + 1;
+            setCounterPassenger(result)
+            setValue('counterPassenger', result)
+        }
+    };
+    const minusOnePassenger = (e) => {
+        e.preventDefault();
+        if (counterPassenger > 0) {
+            let result = counterPassenger - 1;
+            setCounterPassenger(result)
+            setValue('counterPassenger', result)
+        }
     };
 
     const {
@@ -45,6 +68,7 @@ const Form = () => {
         },
         handleSubmit,
         // reset,
+        // watch,
         setValue,
     } = useForm({
         mode: "onBlur",
@@ -57,13 +81,13 @@ const Form = () => {
 
     
         return (
-            <section className="section">
-                <h2 className="section-header">Ну що, поїхали?</h2>
+            <section className="section container">
+                <h2 className="section__header">Ну що, поїхали?</h2>
                 <form  className="form" onSubmit={handleSubmit(onSubmit)}>
                     
                     <label className="form__label">
                         Ваш номер:
-                        <ReactSVG src="../../img/star_active.svg" width={25} className="form__icon"/>
+                        <Phone  width={25} className="form__icon"/>
                         <input className="form__input" type="numder" placeholder="+38" label={'Ваш номер:'}
                             {...register('clientPhone',{
                                 required: "Поле обов'язкове",
@@ -85,7 +109,7 @@ const Form = () => {
                     
                     <label className="form__label">
                         Куди під'їхати:
-                        <StarSVG width={25} className="form__icon"/>
+                        <Place width={25} className="form__icon"/>
                         <input  className="form__input" placeholder="Вулиця"
                             {...register('fromAddress',{
                                 required: "Поле обов'язкове", 
@@ -100,7 +124,7 @@ const Form = () => {
 
                     <label className="form__label">
                         Куди веземо:
-                        <StarSVG width={25} className="form__icon"/>
+                        <Place width={25} className="form__icon"/>
                         <input className="form__input" placeholder="Вулиця"
                             {...register('toAddress',{
                                 required: "Поле обов'язкове",  
@@ -111,23 +135,46 @@ const Form = () => {
                     <div className="form__error">
                         {errors?.toAddress && <span className="error"> {errors?.toAddress?.message || "Error!"}</span>}
                     </div>
-                            
-                    <div className="counter-wrap  section">
-                        <h4 className="counter-wrap__header">вантажники</h4>
-                        <button 
-                            className="counter-btn" 
-                            onClick={minusOneDocker}>
-                            -
-                        </button>
-                        <input className="counter-content"
-                            {...register("counterDocker")} value={counterDocker}/>
-                        <button className="counter-btn" onClick={plusOneDocker}>+</button>
-                        
-                    </div>        
-                    
-                    <div className='section'>
-                        <h4  className='section-header'> Тип машини </h4>
 
+                    <div className="counter-section">        
+                        <div className="counter-wrap">
+                            <h4 className="counter-wrap__header">Вантажники</h4>
+                            <button 
+                                className="counter-btn" 
+                                onClick={minusOneDocker}>
+                                -
+                            </button>
+                            <input className="counter-content"
+                                {...register("counterDocker")} 
+                                value={counterDocker}
+                                disabled 
+                                />
+                            <button className="counter-btn" onClick={plusOneDocker}>+</button>
+                            
+                        </div>
+                        <div className="counter-wrap">
+                            <h4 className="counter-wrap__header">Пасажири</h4>
+                            <button 
+                                className="counter-btn" 
+                                onClick={minusOnePassenger}>
+                                -
+                            </button>
+                            <input className="counter-content"
+                                {...register("counterPassenger")}
+                                value={counterPassenger} 
+                                disabled    
+                                />
+                            <button 
+                                className="counter-btn" 
+                                onClick={plusOnePassenger}>
+                                +
+                            </button>
+                            
+                        </div>         
+                    </div> 
+                    <div className=''>
+                        <h4  className=' car__header'> Тип машини </h4>
+                        
                         <input className="form-car"
                             {...register('car')} value={1}/>
                         <Swiper
@@ -139,15 +186,13 @@ const Form = () => {
                             spaceBetween={100}
                             slidesPerView={1}
                             // loop={true} при увімкненому параметрі - не працює конструкція нижче!
-                            onSlideChange={(swiper) => setValue('form-car', (swiper.activeIndex + 1))}
+                            onSlideChange={(swiper) => setValue('car', (swiper.activeIndex + 1))}
                             className="mySwiper form-slider">
 
-                            
                             
                             <SwiperSlide>
                             
                                 <div className="form-slide">
-                                    {/* <Img1 width={120} /> */}
                                     <Image src={require("../../img/form/kangoo.webp")} title="Мінівен"/>
                                     <h5>Мінівен</h5>
                                     <p>до 800кг (до 4 м.куб)</p>
@@ -197,7 +242,7 @@ const Form = () => {
                             <div className="swiper-button-next"></div>
                         </Swiper>
                     </div>
-                    <input type="submit" className="btn primary" disabled={!isValid} value="Замовити"/>
+                    <input type="submit" className="btn primary" disabled={!isValid} value="ЗАМОВИТИ"/>
                 </form>
                 
             </section>

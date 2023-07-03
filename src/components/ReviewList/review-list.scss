@@ -1,0 +1,53 @@
+
+
+.section-reviews{
+    position: relative;
+    display: block;
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        
+        overflow-y: scroll;
+        width: 90%;
+        padding-left: 4.0625em;
+        padding-right: 3.75em;
+        padding-top: 0.9375em;
+        margin: 0 auto;
+
+        @media (max-width: 900px) {
+          width: 100%;
+          padding: 0 1em;
+          
+        }
+
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+        
+        &::-webkit-scrollbar-track {
+          background: #f6f7f9;
+
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background:#00a5f1;
+          border-radius: 5px;
+          cursor: pointer;
+
+
+        }
+        
+        &::-webkit-scrollbar-thumb:hover {
+          background: #0083c0;
+        }
+
+
+
+        &_item{
+            width: 100%;
+        }
+    }
+}
