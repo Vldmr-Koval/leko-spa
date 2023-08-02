@@ -18,17 +18,27 @@ const Product = () => {
     const prodName = params.name;
 
     const product = products.find(({name})=> name === prodName)
+    console.log(product)
 
     
     return (
         <>  
-            <WithForm header={product.textName}>
-                <Image width={650} heigth={470} src={product.srcImg}/> 
-            </WithForm>
-            <PriceList product={product}/>
-            <Advantages/>
-            <Feedback/>
-            <TextArea size={450} children={product.textShow()} header={product.textName}/> 
+        {(!product) ? <>
+                        <h1> Немає продукта із назвою {prodName} </h1>
+                        <Advantages/>
+                        <Feedback/>
+                    </>
+                    : <> 
+                        <WithForm header={product.textName}>
+                        <Image width={650} heigth={470} src={product.srcImg}/> 
+                        </WithForm>
+                        <PriceList product={product}/>
+                        <Advantages/>
+                        <Feedback/>
+                        <TextArea size={450} children={product.textShow()} header={product.textName}/> 
+                    </>
+        }
+            
         </>
        
     )

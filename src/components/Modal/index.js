@@ -1,22 +1,22 @@
-import PropsTypes from 'prop-types';
-import { useEffect } from 'react';
+// import PropsTypes from 'prop-types';
+// import { useEffect } from 'react';
 import Image from '../ui/Image'
 import './modal.scss'
 import {successComent} from '../../img'
-import { useOutletContext } from "react-router-dom";
+// import { useOutletContext } from "react-router-dom";
 
 const Modal = ({ setIsModalOpen}) => {
 
-    const {setIsScrollingEnabled} = useOutletContext();
+    // const {setIsScrollingEnabled} = useOutletContext();
 
     const handleSubmit = () => {
         setIsModalOpen(false);
-        setIsScrollingEnabled(true);
+        // setIsScrollingEnabled(true);
     }
 
-    useEffect(()=>{
-        setIsScrollingEnabled(false)
-    }, [])
+    // useEffect(()=>{
+    //     setIsScrollingEnabled(false)
+    // }, [])
 
     
     return (

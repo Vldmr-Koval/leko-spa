@@ -1,6 +1,6 @@
 import './text-area.scss'
 
-import text from './text'
+// import text from './text'
 // const children = text.packing()
 // TODO: зробити нормальну систему підтягування текстів в текстові поля. Редакс? АПІ?
 
