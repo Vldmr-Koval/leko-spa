@@ -22,10 +22,11 @@ const ProductBlock = () => {
 
                 {products.map((product)=> {
                     return (
-                        <NavLink className="section-product__content_item" to={`/product/${product.name}`}> 
+                        <NavLink className="section-product__content_item" key={product.id}  to={`/product/${product.name}`}> 
                             <Image 
                             className="section-product__content_item_img"
-                            src={product.srcIco}/>
+                            src={product.srcIco}
+                            />
                             <p>{product.textName}</p>
                             {(product.text2) ? <p>{product.text2}</p> : <></>}
                         </NavLink>
