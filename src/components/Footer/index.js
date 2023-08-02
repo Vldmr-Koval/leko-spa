@@ -30,8 +30,11 @@ const Footer = () => {
                     <ul className="footer__wrap_body">
                         {products.map((product)=> {
                         return (
-                            <NavLink className="footer-hover" to={`/product/${product.name}`}> 
-                            
+                            <NavLink 
+                                className="footer-hover" 
+                                to={`/product/${product.name}`}
+                                key={product.id}> 
+                                
                                 <li className="footer__product">{product.textName}</li>
                                 
                             </NavLink>
