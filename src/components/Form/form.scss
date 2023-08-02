@@ -1,0 +1,205 @@
+@import '/src/styles/variables.scss';
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    width: 100%;
+    max-width: 516px;
+    margin: 0 auto 1em;
+    &__label{
+        color: #272626;
+        font-weight: 600;
+        line-height: 38px;
+        position: relative;
+    }
+    &__icon{
+        position: absolute;
+        left: 14px;
+        top: 45px;
+    }
+    &__input{
+        background: #f6f6f6;
+        border-radius: 2em;
+        padding: .875em .375em;
+        border: 2px solid transparent;
+        transition: .3s;
+        flex-shrink: 1;
+        width: 100%;
+        color: inherit;
+        padding-left: 50px;
+    }
+    &__error{
+        color: rgb(233, 90, 90); 
+        // line-height: 28px;
+        height: 20px;
+
+    }
+}
+
+
+
+
+
+.counter-section{
+    display: flex;
+    flex-wrap: nowrap;
+    // position: relative;
+    .counter-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+
+        &__header{
+            flex-shrink: 1;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 0.3125em;
+            display: block;
+            font-size: 1rem;
+            color: #272626;
+            line-height: 38px;
+            @media screen and (max-width: 500px) {
+                order: -2;
+              }
+         
+        }
+    }
+    
+    .counter-content{
+        
+        background: $primary-color;
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+        border: 2px solid transparent;
+        border-radius: 2em;
+        font-size: 1.375em;
+        padding: 0.63636em 0.3125em;
+        transition: .3s;
+        width: calc(100% - 2.5em - 40px);
+        min-width: 58px;
+
+        @media screen and (max-width: 500px) {
+            order: -1;
+            width: 70%;
+            margin: 0 15% 5px;
+            // width: calc(100% - 2.5em);
+          }
+      
+    }
+    .counter-btn{
+        margin: 5px;
+        width: 1.25em;
+        background-color: #73737315;
+        border-radius: 50%;
+        height: 1.25em;
+        font-weight: 500;
+        color: #3b3b3b;
+        font-size: 1.8em;
+        text-align: center;
+        user-select: none;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            background-color: #73737341;
+            transition: all 0.3s linear;
+            transform: translateY(-2px);
+            box-shadow: 0px 2px 0px 0px #73737315;
+        }
+    
+    }
+}
+
+
+.car__header{
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0.3125em;
+    display: block;
+    font-size: 1rem;
+    color: #272626;
+    line-height: 38px;
+}
+.form-car{
+    display: none;
+}
+.form-slider{
+    width: 280px;
+
+}
+.form-slide{
+    width: 180px;
+    margin: 0 auto;
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    flex-direction: column;
+
+    h5{
+        margin-top: 35px;
+    }
+    p{
+        margin: 10px 0 10px 0;
+    }
+    // width: 100%;
+    // margin: 0 30px;
+}
+
+// START slider`s buttons custom gradient
+.swiper-button-prev{
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 140px;
+        background: linear-gradient(to right, #fff, #ffffff00);
+        z-index: 4;
+
+    }
+    &::after{
+        font-family: swiper-icons;
+        font-size: var(--swiper-navigation-size);
+        text-transform: none !important;
+        letter-spacing: 0;
+        font-variant: initial;
+        line-height: 1;
+        z-index: 5;
+
+    }
+    
+}
+
+.swiper-button-next{
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 140px;
+        background: linear-gradient(to left, #fff, #ffffff00);
+        z-index: 4;
+
+    }
+    &::after{
+        font-family: swiper-icons;
+        font-size: var(--swiper-navigation-size);
+        text-transform: none !important;
+        letter-spacing: 0;
+        font-variant: initial;
+        line-height: 1;
+        z-index: 5;
+
+    }
+    
+}
+
+// END slider`s buttons custom gradient

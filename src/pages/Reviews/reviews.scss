@@ -1,0 +1,42 @@
+@import '/src/styles/variables.scss' ;
+
+.section-reviews{
+    position: relative;
+    
+    &-bg{
+        position: absolute;
+        background-color: $primary-color;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        // left: -20%;
+        top: 0;
+    }
+    &__wrap{
+        width: 100%;
+        display: flex;
+        text-align: left;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;    
+        flex-direction: row;
+        justify-content: center;
+        
+        &_header{
+            padding-left: 10%;
+            color: #ffffff;
+            width: 42%;
+            min-width: 280px;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            // font-size: 2.9vw;
+            font-weight: 700;
+            margin: 0 0 17px;
+
+        }
+        &_image{
+            width: 150px;
+            
+        }
+    }
+}

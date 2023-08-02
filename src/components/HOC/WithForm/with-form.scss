@@ -1,0 +1,91 @@
+.section-with-form{
+    .section{
+        padding: 0;
+    }
+
+    &__wrap{
+        display: flex;
+        width: 100%;
+        gap: 2em;
+        // align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+
+        &_left{
+            // width: 60%;
+            margin: 40px auto 0;
+            position: relative;
+            // transform: translateY(15px);
+
+            &_header{
+                position: absolute;
+                top: 2.3em;
+                width: 100%;
+                padding: 0 10px;
+                text-align: center;
+                margin: 0 auto;
+                color: #fff;
+                font-size: 1.6em;
+            }
+            .image{
+                max-width: 100%;
+                border-radius: 0 50px 50px 0;
+            }
+
+        }
+        .section__header{
+            // display: none;
+            text-align: left;
+            margin: 0;
+        }
+
+    }
+}
+
+@media (max-width: 1200px){
+
+    
+        .section-with-form{
+    
+            &__wrap{
+    
+                flex-wrap: wrap;
+        
+        
+                &_left{
+                    width: 100%;
+                    margin: 0 auto 0;
+                    position: relative;
+                    // transform: translateY(15px);
+        
+                    &_header{
+                        position: absolute;
+                        top: 2.3em;
+                        width: 100%;
+                        padding: 0 10px;
+                        text-align: center;
+                        margin: 0 auto;
+                        color: #fff;
+                        font-size: 1.6em;
+                    }
+                    .image{
+                        max-width: 100%;
+                        border-radius: 0 50px 50px 0;
+                    }
+        
+                }
+                .section__header{
+                    // display: none;
+                    text-align: left;
+                    margin: 0;
+                }
+        
+            }
+        }
+        
+    
+     
+}
+
+

@@ -1,0 +1,133 @@
+.swiper-slide{
+
+}
+.feedback-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 370px;
+    background-color: #f6f7f9;
+    border-radius: 15%;
+    margin-top: 70px;
+    padding: 0 15px 20px 15px;
+    margin: 70px auto 50px auto;
+
+  &__img{
+    position: relative;
+    margin-top: -50px;
+    border: 10px solid #fff;
+    margin-bottom: 10px ;
+    
+  }
+  &__img-quotes{
+    position: absolute;
+    right: 4em;
+    transform: translateY(-1em);
+    width: 3em;
+  }
+
+  &__rating{
+
+  }
+  &__content{
+    margin: 5px 0 20px 0;
+  }
+  &__name{
+    font-weight: bold;
+    margin-bottom: 5px ;
+
+  }
+
+}
+
+//for review list
+.section-reviews{
+  @media (max-width: 900px) {
+    
+  }
+  .feedback-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    background-color: #f6f7f9;
+    border-radius: 1.875em;
+    position: relative;
+    margin: 0 0 3.75em;
+    padding: 2.5em 6.875em 2.5em 5.625em;
+    max-width: 680px;
+    &:nth-child(2n) {
+      margin-left: auto;
+    }
+    @media (max-width: 900px) {
+
+      align-items: center;
+      text-align: center;
+      // width: 90%;
+      // max-width: 370px;
+      border-radius: 15%;
+      // margin-top: 70px;
+      padding: 0 15px 20px 15px;
+      margin: 70px auto 50px auto;
+    }
+    &__img{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin: -4.0625em 0 0 -4.0625em;
+      border: 10px solid #fff;
+      width: 8.125em;
+      height: 8.125em;
+      @media (max-width: 900px){
+        top: 0;
+        // position: relative;
+        left: 50%;
+        margin-top: -50px;
+        border: 10px solid #fff;
+        margin-bottom: 10px ;
+      }
+      // margin-bottom: 10px ;
+      
+    }
+    &__img-quotes{
+      right: 2em;
+      top: 0;
+      width: 3em;
+      @media (max-width: 900px){
+        position: absolute;
+      }
+    }
+    &__rating{
+      order: -5;
+      left: 0;
+      @media (max-width: 900px){
+        margin-top: 80px;
+      }
+
+    }
+    &__content{
+      margin: 5px 0 20px 0;
+      font-style: italic;
+      @media (max-width: 900px){}
+
+    }
+    &__name{
+      font-weight: bold;
+      margin-bottom: 5px ;
+      order: -4;
+      @media (max-width: 900px){}
+
+
+
+    }
+    &__position{
+      order: -3;
+      @media (max-width: 900px){}
+
+    }
+
+}
+}

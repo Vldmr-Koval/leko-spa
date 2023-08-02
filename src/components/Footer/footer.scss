@@ -1,0 +1,168 @@
+.footer{
+        color: #c4c4c4;
+        background: #202d39;
+        font-size: 24px;
+        padding-top: 2.28571em;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+    &__wrap{
+
+        &_top{
+            font-size: 0.8em;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2.28571em;
+            padding-left: 1em;
+            font-weight: 500;
+            &_logo{
+                margin-right: 15px;
+            }
+            &__nav{
+                
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 15px;
+                @media (max-width: 500px) {
+                    margin-top: 1em;
+                    width: 100%;
+                  }
+                
+                &_item{
+                    color: #ebebeb;
+                    text-decoration: none;
+                    font-weight: 600;
+                    line-height: 1em;
+
+                    
+
+                }
+            }
+        }
+        &_body{
+                display: grid;
+            grid-template-columns: repeat(4,1fr);
+            align-items: center;
+            font-size: 1.0em;
+            margin-bottom: 2.66667em;
+            padding-left: 1em;
+            gap: 1em;
+            list-style: none;
+            @media (max-width: 900px) {
+                grid-template-columns: repeat(3, 1fr);
+                // font-size: 0.6em; 
+              }
+              @media (max-width: 765px) {
+                grid-template-columns: repeat(2 , 1fr); 
+              }
+              @media (max-width: 524px) {
+                grid-template-columns: repeat(1 , 1fr); 
+                // font-size: 0.5em;
+              }
+              .footer-hover{
+                text-decoration: none;
+                li{
+                    font-size: 0.7em;
+                    list-style: none;
+                    text-decoration: none;
+                    color: #e7e7e7;
+                    &:hover{
+                        transition: color 0.3s linear;
+                        color:#00a5f1;
+                        text-decoration: none;
+    
+                    }
+                  }
+            }
+              
+        }
+        &_bot{
+            font-size: 0.8em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            font-size: .85714em;
+            padding: 2.66667em 0;
+            border-top: 1px solid hsla(0,0%,100%,.2);
+
+            @media (max-width: 1140px) {
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 2em;
+              }
+            &_info{
+                position: relative;
+                display: flex;
+                align-items: center;
+                font-size: 0.85em;
+                // gap: 10px;
+                @media (max-width: 900px) {
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    text-align: center;
+                    
+                    &_item{
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            // border-right: none;
+                            border-right: 1px solid hsla(0, 0%, 100%, 0);
+                            border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.2);
+                            width: 2em;
+                            bottom: 0;
+                            left: calc(50% - 1em);
+                        }
+                    }
+                  }
+                &_item{
+                    padding: 1em 2em;
+                    position: relative;
+                    @media (min-width: 900px){
+                        &:not(:last-child):after {
+                            content: "";
+                            position: absolute;
+                            border-right: 1px solid hsla(0deg, 0%, 100%, 0.2);
+                            height: 100%;
+                            top: 0;
+                            margin-left: 2em;
+                        }
+                    }
+                    }
+
+            }
+            &_mail{
+                margin: 0 25px;
+                &_link{
+                    text-decoration: none;
+                    color: #c4c4c4;
+
+                    
+                }
+            }
+            &__social{
+                display: flex;
+                align-items: center;
+                gap: 1em;
+                
+                a *{
+                    fill: #c4c4c4;
+
+                }
+            }
+        }
+    }
+
+
+
+    .icon-hover:hover *{
+        transition: fill 0.3s linear;
+        fill:#00a5f1;
+        text-decoration: none;
+
+    }
+}
+

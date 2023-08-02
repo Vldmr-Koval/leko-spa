@@ -1,0 +1,105 @@
+@import '/src/styles/variables.scss';
+
+
+.navbar{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  align-content: center;
+  &__item{
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    font-size: $m-text-size;
+    &:hover{
+      color: #00a5f1;
+      transition: all 0.15s linear;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+
+.burger{
+
+  display: none;
+  // overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  // margin: 0 10px;
+
+  @media (max-width: 768px) {
+  display: flex;
+
+  }
+  &.active div{
+    &:nth-child(1) {
+      transform: rotate(44deg);
+      width: 2.65rem;
+
+    }
+    &:nth-child(2) {
+        transform: rotateX(90deg);
+
+      opacity: 0.5
+    }
+    &:nth-child(3) {
+      transform: rotate(-44deg);
+      width: 2.65rem;
+
+
+    }
+  }
+  div{ 
+      width: 2rem;
+      height: 0.25rem;
+      // background-color: ${({ open }) => open ? '#ccc' : '#333'};
+      border-radius: 10px;
+      transform-origin: 1px;
+      background-color: #000;
+      transition: all 0.3s linear;
+      // margin-bottom: 0.3em;
+      &:nth-child(1) {
+        // transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      }
+      &:nth-child(2) {
+      //   transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
+      //   opacity: ${({ open }) => open ? 0 : 1};
+      }
+      &:nth-child(3) {
+      //   transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      }
+
+      @media (max-width: 768px) {
+          display: flex;
+          justify-content: space-around;
+          flex-flow: column nowrap;
+          
+        }
+  }
+}
+
+.right-nav{
+  position: absolute;
+  background-color: #fff;
+  margin-top: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  text-align: center;
+  z-index: 1000;
+  padding: 3em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em ;
+  // border: #00a5f1 solid 2px; 
+
+  // display: none;  
+}
