@@ -9,9 +9,6 @@ import {useParams} from 'react-router-dom'
 import './product.scss'
 import products from './products_data'
 
-// import text from '../../components/TextArea/text'
-// const children = text.packing()
-
 const Product = () => {
    
     const params = useParams();
