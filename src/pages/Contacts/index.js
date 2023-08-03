@@ -17,7 +17,6 @@ const Contacts = () => {
     return (
         <>
         <section className='section section-contacts'>
-            
 
             <div className='container'>
                 <Image src={line} className={'section-contacts__line'}/>

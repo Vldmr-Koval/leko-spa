@@ -2,7 +2,6 @@
 import RevieList from '../../components/ReviewList'
 import ReviewForm from '../../components/ReviewForm'
 import {ReactComponent as Bg} from '../../img/bg-review.svg'
-import { useOutletContext } from "react-router-dom";
 
 import './reviews.scss'
 
