@@ -1,7 +1,8 @@
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 // import { useRef , useEffect, useState, createContext    } from "react";
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
+import Form from '../../components/Form'
 
 // const UserContext = createContext(App)
 
@@ -28,10 +29,9 @@ function App() {
       // <div ref={contentWrapperRef}>
       <>
       <Header/>
-      <Outlet/>  
-       {/* context={{setIsScrollingEnabled} } */}
+      <Form/>
       <Footer/>
-      {/* </div> */}
+
       </>
     );
   }

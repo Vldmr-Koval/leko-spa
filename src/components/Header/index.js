@@ -15,10 +15,10 @@ const Header = () => {
         <header className="header-section container">
             <ScrollToTop />
 
-            <NavLink className="logo" to={`/`}>    
+            {/* <NavLink className="logo" to={`/`}>    
                 <Image src={logoDark} width={117} heigth={58} className={"logo_image"}/>  
             </NavLink> 
-            <NavBar/>          
+            <NavBar/>           */}
             <Button className="secondary btn-header">Call</Button>
             
         </header>
