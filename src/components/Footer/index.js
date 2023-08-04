@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 import Image from '../ui/Image'
 import {logoWhite, Facebook, Instagram, Youtube} from '../../img'
@@ -19,15 +19,15 @@ const Footer = () => {
                             src={logoWhite} 
                             width={117} 
                             heigth={58}/> 
-                        <nav className="footer__wrap_top__nav">
+                        {/* <nav className="footer__wrap_top__nav">
                             <NavLink className="footer__wrap_top__nav_item footer-hover" to={`/`}> Головна </NavLink>
                             <NavLink className="footer__wrap_top__nav_item footer-hover" to={`/packaging`}> Пакування </NavLink>
                             <NavLink className="footer__wrap_top__nav_item footer-hover" to={`/reviews`}> Відгуки </NavLink>
                             <NavLink className="footer__wrap_top__nav_item footer-hover" to={`/contacts`}> Контакти </NavLink>
-                        </nav>
+                        </nav> */}
                         
                     </div>
-                    <ul className="footer__wrap_body">
+                    {/* <ul className="footer__wrap_body">
                         {products.map((product)=> {
                         return (
                             <NavLink 
@@ -41,7 +41,7 @@ const Footer = () => {
                         )
 
                         })}
-                    </ul>
+                    </ul> */}
 
                     <div className="footer__wrap_bot">
                         <div className="footer__wrap_bot_info">

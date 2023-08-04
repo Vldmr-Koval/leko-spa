@@ -1,9 +1,8 @@
-// import PropsTypes from 'prop-types';
-// import { useEffect } from 'react';
+
 import Image from '../ui/Image'
 import './modal.scss'
 import {successComent} from '../../img'
-// import { useOutletContext } from "react-router-dom";
+
 
 const Modal = ({ setIsModalOpen}) => {
 
@@ -13,10 +12,6 @@ const Modal = ({ setIsModalOpen}) => {
         setIsModalOpen(false);
         // setIsScrollingEnabled(true);
     }
-
-    // useEffect(()=>{
-    //     setIsScrollingEnabled(false)
-    // }, [])
 
     
     return (
@@ -38,14 +33,5 @@ const Modal = ({ setIsModalOpen}) => {
         
       );
 }
-
-// Modal.propsTypes = {
-
-// };
-
-// Modal.defaultProps = {
-    
-     
-// };
 
 export default Modal
